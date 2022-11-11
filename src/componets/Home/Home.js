@@ -30,33 +30,58 @@ function Home() {
         flexDirection: "column",
       }}
     >
-      <div>
-        <Link to={"login"}>
-          <button>Log in</button>
-        </Link>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row-reverse",
+          backgroundColor: "red",
+          justifyContent: "end",
+          alignItems: "center",
+          width: "100%",
+          height: "35px",
+        }}
+      >
+        <div style={{ marginRight: "1%" }}>
+          <Link to={"login"}>
+            <button>Log in</button>
+          </Link>
+        </div>
       </div>
-      <div>
-        <input
-          type={"submit"}
-          value={"Agendar Cita"}
-          onClick={() => setIsOpen(true)}
-        />
 
-        <Modal
-          isOpen={modalIsOpen}
-          style={customStyles}
-          contentLabel="Example Modal"
-        >
-          <div>
-            <label>Ing. Luz Elena</label>
-            <hr />
-            <a href={url2} target="_blank" rel="noreferrer">
-              <input type={"submit"} value={"Agendar Cita"} />
-            </a>
-            <hr />
-            <button onClick={() => setIsOpen(false)}>close</button>
-          </div>
-        </Modal>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "GrayText",
+          width: "100%",
+          height: "100%",
+          flexDirection: "column",
+        }}
+      >
+        <div>
+          <input
+            type={"submit"}
+            value={"Agendar Cita"}
+            onClick={() => setIsOpen(true)}
+          />
+
+          <Modal
+            isOpen={modalIsOpen}
+            style={customStyles}
+            contentLabel="Example Modal"
+          >
+            <div>
+              <label>Ing. Luz Elena</label>
+              <hr />
+              <a href={url2} target="_blank" rel="noreferrer">
+                <input type={"submit"} value={"Agendar Cita"} />
+              </a>
+              <hr />
+              <button onClick={() => setIsOpen(false)}>close</button>
+            </div>
+          </Modal>
+        </div>
       </div>
     </div>
   );
