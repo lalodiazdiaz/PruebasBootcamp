@@ -51,15 +51,15 @@ function Home() {
       <div
         style={{
           display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
+          justifyContent: "flex-end",
+          alignItems: "flex-start",
           backgroundColor: "GrayText",
           width: "100%",
           height: "100%",
           flexDirection: "column",
         }}
       >
-        <div>
+        <div style={{ marginLeft: "2%", marginBottom: "2%" }}>
           <input
             type={"submit"}
             value={"Agendar Cita"}
